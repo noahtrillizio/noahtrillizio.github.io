@@ -43,7 +43,7 @@ header{
     --hamburger-gap: 6px;
     --foreground: white;
     --background: black;
-    --hamberger-margin: 8px;
+    --hamberger-margin: 25px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -226,6 +226,9 @@ video{
     text-decoration: none;
 }
 
+@media (max-width: 780px) {
+}
+
 #footerF1{
     background-color: #191919;
     width: inherit;
@@ -235,8 +238,12 @@ video{
     padding-top: 4px;
 }
 
-.sideHeading{
+.Portfolio_Page_Heading{
+    font-size: 66px;
     padding-top: 100px;
+    color: dodgerblue; 
+    font-family: Merriweather, consolas; 
+    text-align: center;
 }
 
 .aboutme{
@@ -301,7 +308,7 @@ video{
     font-size: 35px;
     text-decoration: none;
     color: white;
-    margin: 5%;
+    /*margin: 2%;*/
 }
 
 #TopDisplayName:hover{
@@ -311,11 +318,11 @@ video{
 #BottomDisplayTitle{
     font-weight: bold;
     font-size: 18px;
-    margin: 5%;
+    /*margin: 5%;*/
 }
 
 .SEGD{
-    font-size: 65px;
+    font-size: 66px;
     text-align: left;
     /*margin: auto;*/
 }
@@ -342,6 +349,10 @@ video{
 }
 
 @media (max-width: 780px) {
+    #headerH1{
+        margin-left: 2%;
+    }
+
     .FrontPageGraphicRow{
         display: grid;
         flex-direction: column;
@@ -473,17 +484,28 @@ video{
     max-width: 1200px;
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: row;
     margin-left: 0;
     text-align: center;
     margin: auto;
     padding: 3px;
 }
 
+@media (max-width: 760px) {
+    .game_flip_row_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 .flip-box {
     /*display: inline-block;*/
     background-color: transparent;
     width: 400px;
-    height: 250px;
+    min-width: 218px;
+    height: 20vw;
+    min-height: 195px;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin: 10px;
 }
