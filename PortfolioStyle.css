@@ -1,0 +1,592 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+header{
+    background-color: rgb(0, 0, 0, .8);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    resize: both;
+}
+
+.headerElements{
+    background-color: rgb(0, 0, 0, .6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    resize: both;
+    padding: 16px
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+:root {
+    --bar-width: 40px;
+    --bar-height: 5px;
+    --hamburger-gap: 6px;
+    --foreground: white;
+    --background: black;
+    --hamberger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+
+.hamburger-menu{
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    position: sticky;
+    top: var(--hamberger-margin);
+    right: var(--hamberger-margin);
+    z-index: 101;
+    cursor: pointer;
+    float: right;
+}
+
+.hamburger-menu:has(input:checked){
+    --forground: white;
+    --background: #333;
+}
+
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible{
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--forground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing),
+    width var(--animation-timing), rotate var(--animation-timing),
+    translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.hamburger-menu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu input:checked{
+    opacity: 0;
+    width: 0;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar{
+    translate: 0;
+}
+
+.sidebar{
+    transition: translate var(--animation-timing);
+    translate: 150%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamberger-margin) + 1rem);
+    background-color: var(--background);
+    color: var(--foreground);
+    max-width: 10rem;
+    min-height: 100vh;
+    /*float: right;*/
+    text-decoration: none;
+
+    height: 100%;
+    /*width: 0;*/
+    position: fixed;
+    /*z-index: 1;*/
+    top:0;
+    right:0;
+    overflow-x: hidden;
+}
+
+.sidebarLinks{
+    font-family: "Merriweather", "consolas";
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 10px;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.sidebarLinks:hover{
+    color: dodgerblue;
+}
+
+.sidebarButton{
+    font-family: "Merriweather", "consolas";
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    /*padding: 10px;*/
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+    position: inherit;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: -10px;
+}
+
+.sidebarButton:hover{
+    color: dodgerblue;
+}
+
+@media (min-width: 901px) {  
+    .sidebar{
+        display: none;
+    }
+    
+    .hamburger-menu{
+        display: none;
+    }
+}
+
+.row{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.row::before{
+    display: table;
+    content: " ";
+}
+
+.row::after{
+    clear: both;
+}
+
+video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headerH1{ 
+    font-family: "Merriweather", "consolas";
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+    margin-left: 8%;
+    margin-right: auto;
+    display: inline;
+    text-decoration: none;
+}
+
+#footerF1{
+    background-color: #191919;
+    width: inherit;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 4px;
+}
+
+.sideHeading{
+    padding-top: 100px;
+}
+
+.aboutme{
+    font-family: "Merriweather", "consolas";
+    font-size: xx-large;
+    color: dodgerblue;
+}
+
+/*Regular One*/
+#pH1{
+    font-family: "Merriweather", "consolas";
+    color: white;
+    display: inline;
+    float: right;
+    font-size: 16px;
+    text-decoration: none;
+
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 8%;
+}
+
+/*One For Buttons*/
+#pH2{
+    font-family: "Merriweather", "consolas";
+    color: white;
+    display: inline;
+    float: right;
+    font-size: 16px;
+    text-decoration: none;
+
+    padding: 10px;
+    margin-left: auto;
+    margin-right: 8%;
+
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+@media (max-width: 900px){
+    #pH1 {
+        display: none;
+    }
+    
+    #pH2 {
+        display: none;
+    }
+}
+
+#pH2:hover{
+    color: dodgerblue;
+}
+
+#TopDisplayName{
+    -moz-transition: color .2s ease-in;
+    -o-transition: color .2s ease-in;
+    -webkit-transition: color .2s ease-in;
+    transition: color .2s ease-in;
+
+    font-weight: bold;
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    margin: 5%;
+}
+
+#TopDisplayName:hover{
+    color: darkblue;
+}
+
+#BottomDisplayTitle{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5%;
+}
+
+.SEGD{
+    font-size: 65px;
+    text-align: left;
+    /*margin: auto;*/
+}
+
+.FrontPageGraphicRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.FrontPageTextColumn{
+    flex: 50%;
+    padding-left: 5%;
+    display: grid;
+    place-content: center;
+}
+
+.FrontPageGraphicColumn{
+    flex: 50%;
+    padding-left: 5px;
+    padding-right: 10px;
+    padding-top: 0px;
+    /*display: grid;
+    place-content: center;*/
+}
+
+@media (max-width: 780px) {
+    .FrontPageGraphicRow{
+        display: grid;
+        flex-direction: column;
+    }
+
+    .FrontPageTextColumn{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FrontPageGraphicColumn{
+        flex: auto;
+        padding-right: 50%;
+        padding-top: 50px;
+        padding-left: 5%;
+    }
+}
+
+.GameImageCenter{
+    height: 660px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AboutMeTextCenter{
+    text-align: justify;
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+.Resize_Image {
+    max-width: 100%;
+    height: auto;
+}
+
+.BeforeScroll
+{
+    color: blueviolet;
+}
+
+.AfterScroll
+{
+    color: darkgreen;
+}
+
+.site-wrap {
+    /*max-width: 1200px;*/
+    margin: 100px auto; /* Remove 100px to remove gap at top and bottom*/
+    background:black;
+    color: white;
+    /*padding:20px;*/
+    text-align: justify;
+}
+
+.align-left {
+    float:left;
+    margin-right:20px;
+    transform: translateX(-110%);
+}
+
+.align-right {
+    float:right;
+    margin-left:20px;
+    transform: translateX(110%);
+}
+
+.slide-in {
+    opacity:0;
+    transition:1s;
+}
+
+.reveal{
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.introtext-container{
+    max-width: 1030px; /*max-width: 1020px;*/
+    margin: auto; 
+    padding:10px;  
+    text-align: left;  
+}
+
+.introtext-container-split{
+    width: 50%;
+    padding: 10px;
+    margin: auto; 
+}
+
+.logo-container-layout{
+    background-color: #191919;
+    width: inherit;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (min-width: 780px) {
+    .logo-container-layout {
+      flex-direction: row;
+    }
+}
+
+.logo-container-layout img {
+    /*object-fit: cover;*/
+    float: left;
+    margin: auto;
+    /*padding: 5px;*/
+}
+
+.logo-container-display{
+    float: left;
+    padding: 5px;
+    margin: auto;
+}
+
+.game_flip_row_container {
+    /*border: 1px solid #ccc;*/
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 0;
+    text-align: center;
+    margin: auto;
+    padding: 3px;
+}
+
+.flip-box {
+    /*display: inline-block;*/
+    background-color: transparent;
+    width: 400px;
+    height: 250px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: 10px;
+}
+  
+  /* This container is needed to position the front and back side */
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+  
+  /* Position the front and back side */
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+  
+  /* Style the front side (fallback if image is missing) */
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+    display: block;
+}
+  
+  /* Style the back side */
+.flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.center-box-text{
+    display: grid;
+    place-content: center;
+}
+
+.SeeEverythingButton{ 
+    color: dodgerblue; 
+    border: 2px solid dodgerblue;
+    text-align: center;
+    padding: 14px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: auto;
+    margin-top: 20px;
+    float: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 0.4s;
+}
+
+.SeeEverythingButton:hover{
+    background-color: dodgerblue;
+    color: white;
+}
+
+.GameScreenTitle{
+    font-family: "Merriweather", "consolas";
+    color: dodgerblue;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;;
+    font-size: 65px;
+}
+
+.GameInfoBlock{
+    display: block;
+    margin-left: 42%;
+    text-align: left;
+}
+
+@media (max-width: 780px) {
+    .GameInfoBlock{
+        margin-left: 35%;
+    }
+}
+
+.GameInfoRow{
+    margin-top: 15px;
+}
+
+.GameAboutBlock{
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 50px;
+}
+
+.GameAboutText{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

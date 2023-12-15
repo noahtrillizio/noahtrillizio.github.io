@@ -4,10 +4,191 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Noah's Portfolio</title>
+    <link rel="icon" type="images" href="images/Noah_Avatar_just_head_white.png">
+    <link rel="stylesheet" href="PortfolioStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
+  <div class="headerElements">
+    <a href="index.html" style="text-decoration: none;"><h1 id="headerH1">Noah Trillizio</h1></a>
+    <button id="pH2"><b>Contact</b></button>
+    <a id="pH2" href="/download_files/NoahTrillizio_Resume.pdf" download><b>Resume</b></a>
+    <a id="pH2" href="PortfolioIndex.html"><b>Portfolio</b></a>
+
+    <label class="hamburger-menu">
+      <input type="checkbox">
+    </label>
+    <aside class="sidebar">
+      <nav>
+        <a class="sidebarLinks" href="PortfolioIndex.html"><div><b>Portfolio</b></div></a>
+        <a class="sidebarLinks" href="/download_files/NoahTrillizio_Resume.pdf" download><div><b>Resume</b></div></a>
+        <button class="sidebarButton"><b>Contact</b></button>
+      </nav>
+    </aside>
+  </div>
+  
+  
+
+  <div class="site-wrap">
+    <div class="FrontPageGraphicRow">
+      <div class="FrontPageTextColumn">
+        <div class="SEGD">Software Engineer &</div>
+        <div class="SEGD" style="color: dodgerblue;">Game Designer</div>
+      </div>
+      <div class="FrontPageGraphicColumn">
+        <img src="images/Superstar_Noah_Avatar_White.png" style="width: 70%;">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div id = "divToShow" class = "reveal introtext-container">
+      <div class="aboutme" style="text-align: center;">About Me</div>
+      <div class="AboutMeTextCenter">
+        <p>Salutations! I'm <b><u>Noah Trillizio</u></b>, a game programmer and designer from Buffalo, New York, and I've loved <b><u>video games</u></b> for as long as I 
+          can remember and have always wanted to be able to give back to the medium that raised me. I've been making games since I was 9 where I would make up 
+          card and board games for my Boy Scouts troop, before eventually learning to code in high school. Since then have graduated cum laude from Bradley University 
+          with a <b><u>Bachelor's in Computer Science</u></b> with a concentration in Game Technology and a <b><u>Minor in Game Design</u></b>.
+        </p>
+        <p>Here you can see some of the projects I've had the opportunity of contributing to. I have a strong perseverance for learning 
+          new things and taking on challenges, doing the work that others might not want to do but still needs to be done. That's how I ended up learning how to do 
+          network programming and PHP. I've always been extremely curious about the technical side of games, which I believe is one of the key factors that has led 
+          me to learn the broad skill set I have today.
+        </p>
+        <p> Sometimes I also like to make websites for the games I make. Like this one, you could say I made it for this little game we 
+          call life. If you have any questions please feel free to contact me!
+        </p> 
+      </div>
+    </div>  
+  
+
+    
+    <div class="logo-container-layout">
+      <img src="images/UnrealTransparent.png" style="height: 200px;">
+      <img src="images/UnityTransparent.jpg">
+      <img src="images/GameMakerStudioLogoTransparent.png">
+    </div>
+    
+    <br>
+    <p class="aboutme" style="text-align: center;">Portfolio</p>
+    <br>
+
+    <div class="game_flip_row_container"> 
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+  
+          <img src="images/WickedWizards_Icon.png" alt="Wicked" class="flip-box-front">
+  
+          <div class="flip-box-back center-box-text">
+            <a id="TopDisplayName" href="WickedWizardsIndex.html">Wicked Wizards</a>
+            <p style="margin: 5%;">Join your fellow wizards and take over the world!</p>
+            <div id="BottomDisplayTitle">Networking / Database Programmer</div>
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+  
+          <img src="images/FantasiasFrigate_Icon.png" alt="Demo" class="flip-box-front">
+  
+          <div class="flip-box-back center-box-text">
+            <a id="TopDisplayName" href="Fantasia'sFrigateIndex.html">Fantasia's Frigate</a>
+            <p style="margin: 5%;">Embark on Fantasia's Frigate, where everything is not what it seems.</p>
+            <div id="BottomDisplayTitle">Programmer</div>
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+  
+          <img src="images/Anxiety_Icon.png" alt="Doom" class="flip-box-front">
+  
+          <div class="flip-box-back center-box-text">
+            <a id="TopDisplayName" href="AnxietyIndex.html">Anxiety: The Game</a>
+            <p style="margin: 5%;">Battle yout way through your inner anxiety's in a turn based fashion.</p>
+            <div id="BottomDisplayTitle">Battle System Programming</div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    
+    <div class="game_flip_row_container"> 
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+  
+          <img src="images/MummyMansion_Icon.png" alt="Wicked" class="flip-box-front">
+  
+          <div class="flip-box-back center-box-text">
+            <a id="TopDisplayName" href="MummyMansionIndex.html">Mummy Mansion</a>
+            <p style="margin: 5%;">Take back what is rightfully yours from a rich corrupt art collector.</p>
+            <div id="BottomDisplayTitle">Programmer</div>
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+  
+          <img src="images/MoleMaina_Icon.png" alt="Demo" class="flip-box-front">
+  
+          <div class="flip-box-back center-box-text">
+            <a id="TopDisplayName" href="MoleManiaIndex.html">Mole Mania</a>
+            <p style="margin: 5%;">A simple mole game, about wacking some moles. Nothing suspitious here.</p>
+            <div id="BottomDisplayTitle">Genreal Programmer and VFX / Sound Programmer</div>
+          </div>
+  
+        </div>
+      </div>
+
+      <div class="flip-box">
+        <div class="flip-box-inner">
+  
+          <img src="images/DoomMates_Icon.png" alt="Doom" class="flip-box-front">
+  
+          <div class="flip-box-back center-box-text">
+            <a id="TopDisplayName" href="DoomMatesIndex.html">Doom Mates</a>
+            <p style="margin: 5%;">How far would you challenge fate for your Roommate?</p>
+            <div id="BottomDisplayTitle">Visual Novel Programmer</div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    
+    <br>
+
+    <a href="PortfolioIndex.html" class="SeeEverythingButton">See Everything</a>
+    
+  </div>
+
+  <footer id="footerF1">
+    <p class="aboutme">Contact Me:</p>
+    <p style="max-width: 700px; margin: auto;">Feel free to send me a message here: trillizio3@hotmail.com, I'll try to respond 
+      as quick as I can! I'm also on social media, if you'd like to contact me there:
+    </p>
+
+    <div>
+      <a href="https://www.linkedin.com/in/noah-trillizio-184b46182/" style="text-decoration: none;">
+        <img src="images/LinkedinLogo.png" style="padding: 15px;">
+      </a>
+      <a href="https://www.instagram.com/nuclearnoah399/">
+        <img src="images/InstagramLogo.png" style="height: 78px; padding: 15px;">
+      </a>
+    </div>
+    </footer>
+
+  <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script> 
+  <script src="portfolio.js"></script>
 </body>
 </html>
