@@ -43,7 +43,7 @@ header{
     --hamburger-gap: 6px;
     --foreground: white;
     --background: black;
-    --hamberger-margin: 25px;
+    --hamberger-margin: 26px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -218,15 +218,12 @@ video{
 #headerH1{ 
     font-family: "Merriweather", "consolas";
     color: white;
-    font-size: 40px;
+    font-size: 38px;
     padding: 10px;
     margin-left: 8%;
     margin-right: auto;
     display: inline;
     text-decoration: none;
-}
-
-@media (max-width: 780px) {
 }
 
 #footerF1{
