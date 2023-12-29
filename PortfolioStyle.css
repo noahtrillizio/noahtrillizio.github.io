@@ -235,6 +235,18 @@ video{
     padding-top: 4px;
 }
 
+.footerText{
+    max-width: 700px;
+    margin: auto;
+}
+
+@media (max-width: 780px){
+    .footerText{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
 .Portfolio_Page_Heading{
     font-size: 66px;
     padding-top: 100px;
@@ -369,10 +381,25 @@ video{
 }
 
 .GameImageCenter{
+    width: 100%;
     height: 660px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.GamePlayImageCenter{
+    width: "640"; 
+    height: "410";
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 980px) {
+    .GameImageCenter{
+        width: 100%;
+    }
 }
 
 .AboutMeTextCenter{
@@ -578,19 +605,48 @@ video{
     display: block;
     margin: auto;
     text-align: center;
-    margin-top: 20px;;
+    margin-top: 20px;
     font-size: 65px;
 }
 
 .GameInfoBlock{
+    /*border: 1px solid #ccc;*/
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin: auto;
+    /*padding: 3px;*/
+}
+
+.CenterGameInfo{
+    /*position: absolute;*/
     display: block;
-    margin-left: 42%;
-    text-align: left;
+    margin-left: 42.5%;
+    /*margin-right: 9%;*/
+    /*margin-left: 40vw;*/
+    text-align: justify;
 }
 
 @media (max-width: 780px) {
     .GameInfoBlock{
         margin-left: 35%;
+    }
+
+    .CenterGameInfo{
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 480px) {
+    .GameInfoBlock{
+        margin-left: 15%;
+    }
+
+    .CenterGameInfo{
+        margin-left: 20%;
     }
 }
 
@@ -608,4 +664,24 @@ video{
 .GameAboutText{
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.Gameplay_Video{
+    width: "640"; 
+    height: "410";
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+@media (max-width: 780px) {
+    .Gameplay_Video{
+        width: 100%
+    }
+
+    .GamePlayImageCenter{
+        width: 100%;
+        height: 100%;
+    }
 }
